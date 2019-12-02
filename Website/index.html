@@ -1,28 +1,67 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Assignment 3">
-<meta name="author" content="Amanda Clément, Joseph Power, Janet Sun, Hazel Thexton">
-<meta name="keywords" content="assignment3, CART211, map, globalization, internet, access">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 3">
+  <meta name="author" content="Amanda Clément, Joseph Power, Janet Sun, Hazel Thexton">
+  <meta name="keywords" content="assignment3, CART211, map, globalization, internet, access">
 
-<title>Internet Globalization</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+  <title>Internet Globalization</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="javascript/script.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/css?family=Monda:400,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 </head>
 
 <body>
-  <header>
-    <h1>Internet Globalization</h1>
+  <!-- outside of container (main content) -->
+  <div id="intro-screen">
+    <p id="intro-message">Securing internet freedom against the rise of digital<br> authoritarianism is fundamental to protecting humanity.
+      <br>
+      <button id="proceed" onclick="hideIntro()">Proceed</button></p>
+  </div>
+  <div id="container">
 
-  </header>
+    <header>
+      <span class="dot"></span>
+      <h3>The Globalization of Internet Access</h3>
 
-  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Po9qrFyZOM8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT THE PROJECT</a>
+            <a href="#">ADDITIONAL INFORMATION</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- closing header -->
+
+    <!-- MAP WILL GO HERE -->
+    <div id="map">
+    </div>
+
+
+
+    <div id="region-selector">
+      <a>Asia Pacific</a>
+      <a>Sub-Saharan Africa</a>
+      <a>Europe</a>
+      <a>Middle East</a>
+      <a>North America</a>
+      <a>Eurasia</a>
+      <a>Americas</a>
+    </div>
+
+  </div>
+  <!-- closing container -->
 </body>
 
 </html>
