@@ -25,8 +25,8 @@ country[0] = {
   y : 0.39,
   width: 0.247,
   height: 0.517,
-  labelWidth: 0.3,
-  labelHeight: 0.2,
+  labelWidth: 0.2,
+  labelHeight: 0.15,
   visible: false,
   lag: 12,
   collisionX : 0.656,
@@ -43,8 +43,8 @@ country[1] = {
   y : 0.072,
   width: 0.468,
   height: 0.452,
-  labelWidth: 0.3,
-  labelHeight: 0.2,
+  labelWidth: 0.2,
+  labelHeight: 0.15,
   visible: false,
   lag: 14,
   collisionX : 0.562,
@@ -61,8 +61,8 @@ country[2] = {
   y : 0.195,
   width: 0.1472,
   height: 0.303,
-  labelWidth: 0.3,
-  labelHeight: 0.2,
+  labelWidth: 0.2,
+  labelHeight: 0.15,
   visible: false,
   lag: 1,
   collisionX : 0.402,
@@ -79,8 +79,8 @@ country[3] = {
   y : 0.49,
   width: 0.223,
   height: 0.138,
-  labelWidth: 0.3,
-  labelHeight: 0.2,
+  labelWidth: 0.2,
+  labelHeight: 0.15,
   visible: false,
   lag: 16,
   collisionX : 0.442,
@@ -97,8 +97,8 @@ country[4] = {
   y : 0.5,
   width: 0.19,
   height: 0.38,
-  labelWidth: 0.3,
-  labelHeight: 0.2,
+  labelWidth: 0.2,
+  labelHeight: 0.15,
   visible: false,
   lag: 10,
   collisionX : 0.42,
@@ -115,8 +115,8 @@ country[5] = {
   y : 0.001,
   width: 0.415,
   height: 0.99,
-  labelWidth: 0.3,
-  labelHeight: 0.2,
+  labelWidth: 0.2,
+  labelHeight: 0.15,
   visible: false,
   lag: 4,
   collisionX : 0,
@@ -257,7 +257,7 @@ function checkOverlap() {
 function drawcountry(i) {
 
   image(country[i].image,width*country[i].x,height*country[i].y, width*country[i].width, height*country[i].height);
-  image(country[i].label,mouseX,mouseY, width*country[i].labelWidth, height*country[i].labelHeight);
+  image(country[i].label,mouseX - ((width*country[i].labelWidth)/2),mouseY, width*country[i].labelWidth, height*country[i].labelHeight);
 }
 
 // drawPlayer()
