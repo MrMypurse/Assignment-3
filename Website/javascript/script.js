@@ -23,8 +23,10 @@ let country = [6];
 country[0] = {
   x : 0.656,
   y : 0.39,
-  width: 0.248,
+  width: 0.247,
   height: 0.517,
+  labelWidth: 0.3,
+  labelHeight: 0.2,
   visible: false,
   lag: 12,
   collisionX : 0.656,
@@ -32,14 +34,17 @@ country[0] = {
   collisionWidth: 0.248,
   collisionHeight: 0.517,
   // country image
-  image : 0
+  image : 0,
+  label : 0
 }
 
 country[1] = {
   x : 0.532,
-  y : 0.07,
-  width: 0.469,
-  height: 0.45,
+  y : 0.072,
+  width: 0.468,
+  height: 0.452,
+  labelWidth: 0.3,
+  labelHeight: 0.2,
   visible: false,
   lag: 14,
   collisionX : 0.562,
@@ -47,14 +52,17 @@ country[1] = {
   collisionWidth: 0.465,
   collisionHeight: 0.35,
   // country image
-  image : 0
+  image : 0,
+  label : 0
 }
 
 country[2] = {
-  x : 0.402,
+  x : 0.405,
   y : 0.195,
-  width: 0.15,
+  width: 0.1472,
   height: 0.303,
+  labelWidth: 0.3,
+  labelHeight: 0.2,
   visible: false,
   lag: 1,
   collisionX : 0.402,
@@ -62,14 +70,17 @@ country[2] = {
   collisionWidth: 0.15,
   collisionHeight: 0.303,
   // country image
-  image : 0
+  image : 0,
+  label : 0
 }
 
 country[3] = {
-  x : 0.442,
+  x : 0.444,
   y : 0.49,
-  width: 0.225,
+  width: 0.223,
   height: 0.138,
+  labelWidth: 0.3,
+  labelHeight: 0.2,
   visible: false,
   lag: 16,
   collisionX : 0.442,
@@ -77,15 +88,17 @@ country[3] = {
   collisionWidth: 0.225,
   collisionHeight: 0.138,
   // country image
-  image : 0
-
+  image : 0,
+  label : 0
 }
 
 country[4] = {
-  x : 0.42,
+  x : 0.419,
   y : 0.5,
   width: 0.19,
   height: 0.38,
+  labelWidth: 0.3,
+  labelHeight: 0.2,
   visible: false,
   lag: 10,
   collisionX : 0.42,
@@ -93,14 +106,17 @@ country[4] = {
   collisionWidth: 0.13,
   collisionHeight: 0.3,
   // country image
-  image : 0
+  image : 0,
+  label : 0
 }
 
 country[5] = {
-  x : 0,
-  y : 0,
+  x : 0.002,
+  y : 0.001,
   width: 0.415,
   height: 0.99,
+  labelWidth: 0.3,
+  labelHeight: 0.2,
   visible: false,
   lag: 4,
   collisionX : 0,
@@ -108,7 +124,8 @@ country[5] = {
   collisionWidth: 0.4,
   collisionHeight: 0.99,
   // country image
-  image : 0
+  image : 0,
+  label : 0
 }
 
 // preload()
@@ -119,6 +136,7 @@ function preload() {
   player.image = loadImage("images/player.png");
   for (let i = 0; i < 6; i++) {
     country[i].image = loadImage("images/country" + [i] + ".png");
+    country[i].label = loadImage("images/label" + [i] + ".png");
   }
 }
 
@@ -132,7 +150,7 @@ function centerCanvas() {
 //
 // Sets up the basic elements of the game
 function setup() {
-  var x = (windowWidth);
+  var x = (windowWidth) * 0.95;
   var y = x * 0.5587;
 
   createCanvas(x, y);
@@ -239,6 +257,7 @@ function checkOverlap() {
 function drawcountry(i) {
 
   image(country[i].image,width*country[i].x,height*country[i].y, width*country[i].width, height*country[i].height);
+  image(country[i].label,mouseX,mouseY, width*country[i].labelWidth, height*country[i].labelHeight);
 }
 
 // drawPlayer()
