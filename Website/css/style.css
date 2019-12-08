@@ -6,12 +6,12 @@
 }
 body {
   /* navy blue */
-  background-color: #0b2b46;
+  background-color: #00192C;
 }
 
 /* START OF STYLING FOR INTRO SCREEN */
 #intro-screen {
-  position:fixed;
+  position: fixed;
   background-color: #a21d25;
   width: 100%;
   height: 100%;
@@ -22,7 +22,7 @@ body {
 
 #intro-message {
   color: #CCC;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   width: 100%;
   opacity: 1;
@@ -45,18 +45,21 @@ body {
   line-height: 30px;
   top: 20px;
   position: relative;
+  text-decoration: none;
+  padding: 5px 15px;
 }
 
 #proceed:hover {
   background-color: #a21d25;
   color: #CCC;
   transition: 0.2s;
+
 }
 /* END OF STYLING FOR INTRO SCREEN */
 
 /* START OF HEADER STYLING */
 header {
-  background-color: #0b2b46;
+  background-color: none;
   width: 100%;
   height: 50px;
   display: flex;
@@ -86,7 +89,7 @@ h3 {
 
 .dot:hover {
   /* border: 1px solid #CCC; */
-  background-color: #0b2b46;
+  background-color: #00192C;
   transition: 0.2s;
 }
 
@@ -126,7 +129,7 @@ nav {
 
 .dropdown-content {
   display: none;
-  z-index: 1;
+  z-index: -10;
 }
 
 .dropdown-content a {
@@ -137,6 +140,7 @@ nav {
   text-decoration: none;
   display: block;
   text-align: right;
+  z-index: 10000;
 }
 
 .dropdown-content a:hover {
@@ -155,18 +159,29 @@ nav {
 }
 /* END OF HEADER STYLING */
 
-/* START OF STYLING FOR REGION SELECTOR */
-#region-selector {
-  background-color: #CCC;
-}
-
-#about h2 {
-  
-}
-
+/* START OF STYLING FOR ABOUT PAGE */
 #about {
   padding: 140px 75px 75px 75px;
   color: #CCC;
 }
 
-/* END OF STYLING FOR REGION SELECTOR */
+#about h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.percentage:hover {
+  font-size: 20px;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.percentage, #references {
+  color: #a21d25;
+}
+
+#additional-info {
+  line-height: 30px;
+}
+
+/* END OF STYLING FOR ABOUT PAGE */
