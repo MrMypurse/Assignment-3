@@ -1,9 +1,14 @@
+@font-face {
+  font-family: Monda;
+  src: url('../font/Monda-Regular.ttf');
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Monda', sans-serif;
-  cursor: url('../images/circle.png') 12 12, auto;
+  font-family: Monda, monospace;
+  cursor: url('../images/circle.png') `12 12, auto;
 }
+
 body {
   /* navy blue */
   background-color: #00192C;
